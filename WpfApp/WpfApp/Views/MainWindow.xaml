@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="400">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Content="Liczba 1:" Grid.Row="0" Grid.Column=" 0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="24"/>
+        <Label Content="Liczba 2:" Grid.Row="1" Grid.Column=" 0" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="24"/>
+        <TextBox FontSize =" 24"  Text="{Binding Arg1}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 30"/>
+        <TextBox FontSize="24"  Text="{Binding Arg2}"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 30"/>
+        <Button Command="{Binding NwdCommand}" Grid.Column="1" Content="NWD" FontSize="32" Grid.Row="2" Margin="0 30"/>
+        <Label Content="{Binding Header}" Grid.Row="3" Grid.Column="1" Margin="10 30"/>
     </Grid>
 </Window>
